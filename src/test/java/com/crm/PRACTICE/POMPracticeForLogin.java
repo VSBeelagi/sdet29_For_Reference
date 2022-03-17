@@ -23,6 +23,7 @@ public class POMPracticeForLogin {
 		HomePage hp = new HomePage(driver);
 		hp.ClickOnOrgLnk();
 		hp.signOutOfApp(driver);
+		
 	}
 
 }

@@ -32,6 +32,7 @@ public class ReadDataFromExcelSheetTest {
 		
 		//step6: read the data from the cell
 		String value = ce.getStringCellValue();
+		
 		System.out.println(value);
 		
 		

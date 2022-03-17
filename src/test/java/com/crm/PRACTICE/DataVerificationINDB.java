@@ -37,10 +37,10 @@ public class DataVerificationINDB {
 		 }
 	}
 	
+	
+	//closing DB
 	con.close();
 	
 	
-	
-
-}
+	}
 }

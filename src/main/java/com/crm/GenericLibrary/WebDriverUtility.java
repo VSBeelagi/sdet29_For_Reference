@@ -300,6 +300,7 @@ public class WebDriverUtility {
 		}
 	}
 		
+	
 	/**
 	 * This method will take screenshot and store it in folder called as Screenshot
 	 * @param driver

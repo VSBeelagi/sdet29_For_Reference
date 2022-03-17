@@ -9,6 +9,7 @@ import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap.KeySetView;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.OutputType;
@@ -305,12 +306,15 @@ public class WebDriverUtility {
 	 * @param screenShotName
 	 * @throws Throwable
 	 */
-		public void getScreenShot(WebDriver driver, String screenShotName) throws Throwable
+		public String getScreenShot(WebDriver driver, String screenShotName) throws Throwable
 		{
 			TakesScreenshot ts = (TakesScreenshot) driver;
 			File src = ts.getScreenshotAs(OutputType.FILE);
-			File dst = new File(".\\screenshot\\"+screenShotName+".png");
-			Files.copy(src, dst);
+			String path = ".\\screenshot\\"+screenShotName+".png";
+			File dst = new File(path);
+			FileUtils.copyFile(src, dst);
+			
+			return dst.getAbsolutePath();
 		}
 		
 		/**

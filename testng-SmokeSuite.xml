@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+<groups>
+<run>
+<include name="SmokeSuite">
+</include>
+</run>
+</groups>
+<listeners>
+<listener class-name="com.crm.GenericLibrary.ListenerImplementationClass"></listener>
+</listeners>
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="com.crm.ScriptsUsingGenericUtility.CreateOrgwithBaseclass"/>
+      <class name="com.crm.ScriptsUsingGenericUtility.CreateOrgWithIndTypeBaseClass"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

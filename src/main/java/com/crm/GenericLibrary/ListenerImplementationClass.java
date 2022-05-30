@@ -85,7 +85,7 @@ public class ListenerImplementationClass implements ITestListener{
 		
 		//Execution will start here
 		/*Configure th report*/
-		ExtentSparkReporter htmlReport= new ExtentSparkReporter("./EntentReports/Report"+new JavaUtility().getSystemDateInFormat()+".html");
+		ExtentSparkReporter htmlReport= new ExtentSparkReporter("./ExtentReports/Report"+new JavaUtility().getSystemDateInFormat()+".html");
 		htmlReport.config().setDocumentTitle("SDET-30 Execution Report");
 		htmlReport.config().setTheme(Theme.DARK);
 		htmlReport.config().setReportName("Selenium execution Report");

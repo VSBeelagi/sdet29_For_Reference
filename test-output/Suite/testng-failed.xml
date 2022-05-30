@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
-  <listeners>
-    <listener class-name="com.crm.GenericLibrary.ListenerImplementationClass"/>
-  </listeners>
-  <test thread-count="5" name="Test(failed)">
+<suite thread-count="2" guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="tests">
+  <test thread-count="2" name="Test- Runner - Firefox(failed)" parallel="tests">
+    <parameter name="browser" value="Firefox"/>
     <classes>
       <class name="com.crm.ScriptsUsingGenericUtility.CreateContactWithBaseClass">
         <methods>
@@ -15,5 +13,18 @@
         </methods>
       </class> <!-- com.crm.ScriptsUsingGenericUtility.CreateContactWithBaseClass -->
     </classes>
-  </test> <!-- Test(failed) -->
+  </test> <!-- Test- Runner - Firefox(failed) -->
+  <test thread-count="2" name="Test- Runner - Chrome(failed)" parallel="tests">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="com.crm.ScriptsUsingGenericUtility.CreateContactWithBaseClass">
+        <methods>
+          <include name="login"/>
+          <include name="connectdatabase"/>
+          <include name="launchTheBrowser"/>
+          <include name="createContactTest"/>
+        </methods>
+      </class> <!-- com.crm.ScriptsUsingGenericUtility.CreateContactWithBaseClass -->
+    </classes>
+  </test> <!-- Test- Runner - Chrome(failed) -->
 </suite> <!-- Failed suite [Suite] -->
